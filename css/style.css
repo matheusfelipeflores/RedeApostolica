@@ -17,90 +17,11 @@ body::-webkit-scrollbar-thumb {
   background-color: #000;
   border-radius: 1px;
 }
-header {
-  width: 100%;
-  height: 100px;
-  margin: 0;
-  padding: 0;
-}
-
-.bg-light {
-  width: 100%;
-  height: 100px;
-  background-color: #FFF !important;
-  position: fixed;
-  z-index: 9999999999;
-  box-shadow: 4px 4px 15px 2px rgba(0, 0, 0, 0.7);
-  margin: 0;
-  padding: 0;
-}
-
-.navbar-light .navbar-nav .nav-link {
-  color: #000;
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 300;
-  text-transform: uppercase;
-  font-size: 12px;
-}
-
-
-.nav-link:hover {
-  background-color: rgb(26, 26, 26);
-  color: #FFF !important;
-  transition: 1s;
-}
-
-.redimension-nav-brand {
-  width: 10%!important;
-  height: 100%!important;
-}
-
-.navbar-brand-a {
-  width: 50%;
-  height: 100%;
-  position: relative;
-  top: 25%;
-}
-
-.logoname {
-  width: 25%;
-  height: 100%;
-}
-
-.redimension-logoname {
-  width: 100%;
-  font-family: 'Montserrat', sans-serif;
-  text-transform: uppercase;
-  font-size: 14px;
-  font-weight: 700;
-  text-decoration: none;
-  letter-spacing: 1px;
-  color: #000;
-  position: relative;
-  top: 25%;
-}
-
-.navbar-collapse {
-  margin-left: 10%;
-}
-
-.section-video-banner {
-  width: 100%;
-  height: 100vh;
-}
-
-.first-video-banner {
-  width: 100%;
-  height: 100%;
-}
-
-.section-logo-banner {
-  width: 100%;
-  height: 100vh;
-}
 
 header {
   background-color: var(--a);
+  width: 100%;
+  height: 60px;
 }
 
 .menu-section {
@@ -108,46 +29,61 @@ header {
 }
 
 header .container {
+  width: 100%;
+  height: 80px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 100%;
-  background-color: var(--a);
+  background-color: #FFF;
   margin: auto;
   box-shadow: 0px 0px 20px 0px var(--colorSw);
+  position: fixed;
 }
 
+.logomenu {
+  width: 60px;
+  height: 60px;
+  margin-left: 5%;
+}
+
+.logocirculo {
+  width: 100%;
+  height: 50%;
+  position: relative;
+  top: 15%;
+}
 header nav ul {
   display: flex;
-  width: 65%;
+  height: 100%;
+
 }
 
-header li {
+.nav-item {
   list-style: none;
-  padding: 1rem;
+  margin: 1px solid black;
 }
 
-header  a {
-  text-decoration: none;
-  color: var(--bg);
-  text-transform: uppercase;
-  font-size: 1.4rem; 
-  padding: 2.1rem;
-  transition: all 250ms linear 0s;
-  margin-right: 5%;
-  letter-spacing: 0.1em;
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 45px;
-  max-width: 160px;
+header a {
   position: relative;
+  font-family: 'Montserrat', sans-serif;
   text-decoration: none;
+  color: #000;
+  font-size: 5px; 
+  transition: all 250ms linear 0s;
+  letter-spacing: 1px;
+  position: relative;
   text-transform: uppercase;
+  padding: 10px 10px;
 }
 
 header a:hover {
   text-decoration: none;
+  background-color: black;
+  color: white;
 }
+
+
+
 /* ============ BANNER PRINCIPAL ============ */
 
 .main-principal {
