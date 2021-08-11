@@ -17,13 +17,22 @@ body::-webkit-scrollbar-thumb {
   background-color: #000;
   border-radius: 1px;
 }
+header {
+  width: 100%;
+  height: 100px;
+  margin: 0;
+  padding: 0;
+}
 
 .bg-light {
+  width: 100%;
+  height: 100px;
   background-color: #FFF !important;
   position: fixed;
-  width: 100%;
   z-index: 9999999999;
   box-shadow: 4px 4px 15px 2px rgba(0, 0, 0, 0.7);
+  margin: 0;
+  padding: 0;
 }
 
 .navbar-light .navbar-nav .nav-link {
@@ -34,9 +43,6 @@ body::-webkit-scrollbar-thumb {
   font-size: 12px;
 }
 
-.navbar-brand {
-  margin-left: 5%;
-}
 
 .nav-link:hover {
   background-color: rgb(26, 26, 26);
@@ -44,7 +50,25 @@ body::-webkit-scrollbar-thumb {
   transition: 1s;
 }
 
+.redimension-nav-brand {
+  width: 10%!important;
+  height: 100%!important;
+}
+
+.navbar-brand-a {
+  width: 50%;
+  height: 100%;
+  position: relative;
+  top: 25%;
+}
+
 .logoname {
+  width: 25%;
+  height: 100%;
+}
+
+.redimension-logoname {
+  width: 100%;
   font-family: 'Montserrat', sans-serif;
   text-transform: uppercase;
   font-size: 14px;
@@ -52,6 +76,8 @@ body::-webkit-scrollbar-thumb {
   text-decoration: none;
   letter-spacing: 1px;
   color: #000;
+  position: relative;
+  top: 25%;
 }
 
 .navbar-collapse {
@@ -73,6 +99,55 @@ body::-webkit-scrollbar-thumb {
   height: 100vh;
 }
 
+header {
+  background-color: var(--a);
+}
+
+.menu-section {
+  margin-right: 5%;
+}
+
+header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  background-color: var(--a);
+  margin: auto;
+  box-shadow: 0px 0px 20px 0px var(--colorSw);
+}
+
+header nav ul {
+  display: flex;
+  width: 65%;
+}
+
+header li {
+  list-style: none;
+  padding: 1rem;
+}
+
+header  a {
+  text-decoration: none;
+  color: var(--bg);
+  text-transform: uppercase;
+  font-size: 1.4rem; 
+  padding: 2.1rem;
+  transition: all 250ms linear 0s;
+  margin-right: 5%;
+  letter-spacing: 0.1em;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 45px;
+  max-width: 160px;
+  position: relative;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+header a:hover {
+  text-decoration: none;
+}
 /* ============ BANNER PRINCIPAL ============ */
 
 .main-principal {
@@ -706,7 +781,6 @@ body::-webkit-scrollbar-thumb {
   border: 1px solid #FFF;
   border-radius: 50%;
   color: #FFF;
-  cursor: none;
   top: 25%;
 }
 
