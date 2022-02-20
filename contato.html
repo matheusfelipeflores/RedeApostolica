@@ -16,6 +16,7 @@
     href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://unicons.iconscout.com/release/v3.0.6/css/line.css">
   <!--Jquery-->
+  <script src="https://kit.fontawesome.com/66a9b5e9f5.js" crossorigin="anonymous"></script>
   <script type="text/javascript" src="js/JQuery3.3.1.js"></script>
   <script type="text/javascript" src="js/lightslider.js"></script>
   <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
@@ -25,64 +26,108 @@
 </head>
 
 <body>
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="#">
-      <img src="images/logo1.jpg" width="62" height="40" alt="">
-      <a class="logoname">Rede Apostólica Cristã</a>
-    </a>
-
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav mr-auto">
-        <li class="nav-item">
-          <a class="nav-link" href="#">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Rede Apostólica</a>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-            aria-haspopup="true" aria-expanded="false">
-            Estudos
-          </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="#">Action</a>
-            <a class="dropdown-item" href="#">Another action</a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="#">Something else here</a>
-          </div>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Vídeos</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Pastores</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Fotos</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Contatos</a>
-        </li>
-      </ul>
+  <header>
+    <div class="container">
+      <div class="logomenu">
+        <div class="logocirculo">
+          
+        </div>
+      </div>
+      <div class="menu-section">
+        <div class="menu-toggle">
+          <div class="one"></div>
+          <div class="two"></div>
+          <div class="three"></div>
+        </div>
+        <nav>
+          <ul class="nav-links">
+            <li class="nav-item">
+              <a href="#" class=" btn effect01">Home</a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class=" btn effect01">Estudos</a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class=" btn effect01">Vídeos</a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class=" btn effect01">Pastores</a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class=" btn effect01">Fotos</a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class=" btn effect01">Contatos</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
     </div>
-  </nav>
+  </header>
   <main class="main-contact">
     <section class="section-contact">
 
       <div class="selected-tab">
-        <div class="redimension-selected-tab">
-          <p class="selected-tab-paragraph">Home > Contato</p>
+        
+        <div class="show-location">
+          <div class="redimension-selected-tab">
+            <div class="red-selected-tab"> 
+            <p class="selected-tab-paragraph">Home > Contato</p>
+            </div>
+          </div>
+          
+          <div class="redimension-show-location">
+
+            <div class="show-location-btnAdd">
+              <div class="redimension-show-location-btnAdd">
+
+                <button onclick="fadeOut()" id="btnAdd" class="aTextLocation">
+                  <i class="fas fa-align-left"></i>
+                </button>
+
+              </div>
+            </div>
+
+            <div class="show-location-btnStop">
+              <div class="redimension-show-location-btnStop">
+
+                <button onclick="fadeIn()" id="btnStop" class="aTextLocation">
+                  <i class="fas fa-map-marker-alt"></i>
+                </button>
+                
+              </div>
+            </div>
+
+            <div class="show-location-btnTelephone">
+              <div class="redimension-show-location-btnTelephone">
+
+                <button onclick="fadeIn()" id="btnStop" class="aTextLocation">
+                  <i class="fas fa-phone-alt"></i>
+                </button>
+                
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 
-      <div class="content-all">
+      <button class="fullscreen-location">
+        <img id="fullscreen-location-img" src="images/expand.svg">
+      </button>
 
-        <div class="content-iframe">
+      <div class="content-all">
+        <div id="content-iframe-on" style="z-index: 0;">
+          <iframe class="iframe-location-contact-on"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1736.179591380491!2d-51.807532247211775!3d-29.50588798280045!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x951c71cc5b84c30b%3A0x23992e0b3ff9fc37!2sR.%20Arnaldo%20Krug%2C%20303%20-%20Canabarro%2C%20Teut%C3%B4nia%20-%20RS%2C%2095890-000!5e0!3m2!1spt-BR!2sbr!4v1628454113002!5m2!1spt-BR!2sbr"
+            style="border:0;" allowfullscreen="" loading="lazy">
+          </iframe>
+        </div>
+        <div class="content-iframe" id="fullscreenmode">
           <iframe class="iframe-location-contact"
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1736.179591380491!2d-51.807532247211775!3d-29.50588798280045!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x951c71cc5b84c30b%3A0x23992e0b3ff9fc37!2sR.%20Arnaldo%20Krug%2C%20303%20-%20Canabarro%2C%20Teut%C3%B4nia%20-%20RS%2C%2095890-000!5e0!3m2!1spt-BR!2sbr!4v1628454113002!5m2!1spt-BR!2sbr"
             style="border:0;" allowfullscreen="" loading="lazy"></iframe>
         </div>
-        <div class="all-content">
+        <div id="all-content">
           <div class="selected-tab-talk-us">
             <div class="redimension-selected-tab-talk-us">
               <div class="redimension-selected-tab-talk-us-paragraph">
@@ -157,9 +202,15 @@
                       onclick="document.getElementById('contact-form').submit();">Enviar ></button>
                   </div>
                   <div class="status"></div>
+              
+              
+              
+              
+                </form>
               </div>
-              </form>
+              
           </div>
+        </div>
     </section>
   </main>
   <section id="footer">
@@ -168,7 +219,7 @@
         <div class="information-newsletter-redimension">
           <p class="information-newslatter-paragraph">Cadastre seu E-Mail para receber as novidades</p>
           <form class="form-information-newsletter">
-            <input class="newsletter-input" type="search" placeholder="E-Mail" aria-label="Search">
+            <input class="newsletter-input" type="search" placeholder="E-Mail">
             <button class="newsletter-button" type="submit">Enviar ></button>
           </form>
         </div>
@@ -217,6 +268,8 @@
     integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
     crossorigin="anonymous"></script>
   <script src="js/scripts.js" type="text/javascript"></script>
+  <script src="js/menu.js" type="text/javascript"></script>
+  <script src="js/location.js" type="text/javascript"></script>
   <!-- Option 2: Separate Popper and Bootstrap JS -->
   <!--
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp" crossorigin="anonymous"></script>

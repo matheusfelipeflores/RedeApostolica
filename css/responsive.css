@@ -23,8 +23,8 @@
     }
 
     .one, .two, .three {
-      background-color: var(--bg);
-      height: 3px;
+      background-color: #000;
+      height: 2px;
       width: 70%;
       margin: 3px auto;
       transition-duration: 0.5s; /* Tempo de duração da tranformação do botão de opções */
@@ -44,7 +44,7 @@
       left:0; 
       width: 100vw;
       height: 100vh;
-      background-color: #B56727;
+      background-color: rgb(26,26,26);
       z-index: 10;
       display: flex;
       justify-content: center;
@@ -80,10 +80,15 @@
 
     .menu-section.on nav ul a {
       transition-duration: 0.5s;
-      font-size: 3rem;
+      font-size: 20px;
       line-height: 4rem;
-      display: block;
-          
+      display: block;     
+      color: #FFF;
+    }
+
+    .btn {
+      font-size: 15px!important;
+      padding: 0!important;
     }
 
     .checkboxinput {
@@ -98,9 +103,9 @@
       top: 80px;
       left: 20px;
       animation: show_toast 1s ease forwards;
-      }
+    }
       
-      @keyframes show_toast {
+    @keyframes show_toast {
       0%{
         transform: translateX(-100%);
       }
@@ -110,36 +115,36 @@
       80%, 100%{
         transform: translateX(-10px);
       }
-      }
+    }
       
-      .wrapper.hide {
+    .wrapper.hide {
       animation: hide_toast 5s ease forwards;
+    }
+      
+    @keyframes hide_toast {
+      0%{
+          transform: translateX(10px);
+        }
+      10%{
+          transform: translateX(-5%);
+        }
+      80%, 100% {
+          opacity: 1;
+          pointer-events: none;
+          transform: translateX(-200%);
       }
       
-      @keyframes hide_toast {
-      0%{
-        transform: translateX(10px);
-      }
-      10%{
-        transform: translateX(-5%);
-      }
-      80%, 100% {
-        opacity: 1;
-        pointer-events: none;
-        transform: translateX(-200%);
-      }
-      }
 
       .wrapper .toast{
-      background: var(--a);
-      padding: 10px 5px 5px 5px;
-      border-left: 5px solid #2ecc71;
-      box-shadow: 1px 7px 14px 5px rgba(0,0,0,0.15);
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      width: 100%;
-      height: 100px;
+        background: var(--a);
+        padding: 10px 5px 5px 5px;
+        border-left: 5px solid #2ecc71;
+        box-shadow: 1px 7px 14px 5px rgba(0,0,0,0.15);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        height: 100px;
       }
 
       .wrapper .toast.offline{
@@ -147,8 +152,8 @@
       }
 
       .toast .content{
-      display: flex;
-      align-items: center;
+        display: flex;
+        align-items: center;
       }
 
       .content .icon{
@@ -211,7 +216,7 @@
     #footer {
       width: 100%;
       height: 1100px;
-      background-color: rgb(0, 0, 0);
+      background-color: #f3f3f3;
       margin: 0; 
       box-shadow: 0px 0px 20px 0px var(--colorSw);
     }
@@ -219,15 +224,415 @@
     .newsletter-input {
       width: 100%;
     }
+    
     .newsletter-button {
       width: 100%;
     }
-}
 
-@media (max-width: 768px) {
-  .cursor {
-    width: 0px;
-    height: 0px;
-    opacity: 0;
+    .selected-tab-talk-us {
+      width: 100%;
+      height: 35%;
+      position: relative;
+    }
+
+    .selected-tab-paragraph {
+      float: left;
+      color: #FFF;
+      font-weight: 700;
+      font-style: italic;
+
+    }
+    
+    #location-icon {
+      width: 20px;
+      float: right;
+      opacity: 1;
+    }
+
+    .redimension-selected-tab-talk-us {
+      width: 90%;
+      height: 100%;
+      margin-left: 5%;
+      position: relative;
+      top: 15px;
+    }
+
+    #content-iframe-on{
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 1;
+      opacity: 1;
+    }
+
+    .iframe-location-contact-on {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+      opacity: 1;
+    }
+    .redimension-selected-tab-talk-us-paragraph {
+      width: 100%;
+      height: 55%;
+    }
   }
-}
+
+  @media (max-width: 768px) {
+    /* ========== MENU ============ */
+
+    .menu-section.on nav ul {
+      padding: 0;
+    }
+
+    .newsletter-button {
+      position: relative;
+      top: 10px;
+    }
+
+    .selected-tab-talk-us-paragraph {
+      font-size: 20px;
+      text-align: center;
+    }
+
+    .redimension-selected-tab-talk-us-paragraph-sec {
+      width: 100%;
+      height: 60%;
+      float: right;
+    }
+
+
+
+
+
+    /* ========== FALE CONOSCO ========== */
+    /* Parte que mostra a guia selecionada */
+    .section-contact {
+      width: 90%;
+      height: 90%;
+      position: relative;
+      margin: 0 auto;
+    }
+
+    .show-location {
+      width: 100%;
+      height: 75%;
+      float: right;
+      position: relative;
+    }
+
+    .redimension-selected-tab {
+      width: 100%;
+      height: 35%;
+      position: relative;
+    }
+    
+    .redimension-show-location {
+      width: 160px;
+      height: 100%;
+      position: relative;
+      float: right;  
+      display: flex;
+    }
+
+    .selected-tab {
+      width: 100%;
+      height: 10%;
+      position: relative;
+      top: 4%;
+    }
+
+
+    .redimension-selected-tab {
+      width: 50%;
+      height: 100%;
+      position: relative;
+      float: left;
+    }
+
+    .red-selected-tab {
+      width: 50%;
+      height: 50%;
+      position: relative;
+      top: 25%;
+    }
+    .show-location-btnAdd,.show-location-btnStop,.show-location-btnTelephone {
+      width: 100px;
+      height: 100%;
+      position: relative;
+      float: right;
+      margin: 5px;
+      margin-top: 0;
+      margin-bottom: 0;
+      margin-right: 0;
+    }
+
+    .redimension-show-location-btnAdd, .redimension-show-location-btnStop,.redimension-show-location-btnTelephone {
+      width: 100%;
+      height: 100%;
+      position: relative;
+      margin: 0 auto;
+      background-color: #111111;
+      box-shadow: 2px 2px 10px 2px rgba(0,0,0,.7);
+      z-index: 1;
+    }
+
+
+    .aTextLocation {
+      width: 100%;
+      height: 100%;
+      border: none;
+      background-color: transparent;
+      font-size: 14px;
+      font-family: 'Montserrat', sans-serif;
+      color: #FFF;
+      text-decoration: none;
+      text-align: center;
+      margin-left: auto;
+      z-index: 1;
+      opacity: 1;
+      position: relative;
+      transition: .8s;
+    }
+
+    .aTextLocation:hover {
+      background-color: #e4e4e4;
+      color: #FFF;
+      transition: .8s;
+    }
+    /* ===================================== */
+
+    .selected-tab-talk-us-paragraph {
+      font-size: 20px;
+      text-align: center;
+      float: none;
+      color: #FFF;
+    }
+    
+    .selected-tab-talk-us-paragraph-sec {
+      text-align: center;
+      color: #FFF;
+    }
+
+    .content-all {
+      width: 100%;
+      height: 85%;
+      box-shadow: 2px 2px 15px 2px rgb(0,0,0,.7);
+      background-color: #111111;
+      position: relative;
+      top: 1%;
+    }
+    
+    .all-content {
+      width: 100%;
+      height: 100%;
+      float: right;
+    }
+
+    .content-iframe {
+      float: left;
+      width: 0;
+      height: 0;
+    }
+
+    #all-content {
+      width: 100%;
+      height: 100%;
+    }
+
+    .selected-tab-talk-us {
+      width: 100%;
+      height: 15%;
+      position: relative;
+    }
+
+    .selected-tab-talk-us-paragraph {
+      font-size: 30px;
+      text-align: center;
+      float: none;
+      color: #FFF;
+    }
+
+    .selected-tab-talk-us-paragraph-sec {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 14px;
+      float: none;
+      color: #FFF;
+    }
+    .content-iframe {
+      width: 0;
+      height: 0;
+      opacity: 0;
+    }
+
+    #content-iframe-on {
+      opacity: 0;
+    }
+
+    #imgBtn {
+      width: 15px;
+    }
+
+    .fullscreen-location, #fullscreen-location-img {
+      width: 0;
+      height: 0;
+      box-shadow: none;
+      opacity: 0;
+    }
+    /* ========== FIM FALE CONOSCO ========== */
+  }
+
+    @media (max-width: 425px) {
+
+    
+    /* ========== FALE CONOSCO ========== */
+    .main-contact {
+      width: 100%;
+      height: 160vh;
+      background-color: #f3f3f3;
+    }
+
+    .content-all {
+      width: 100%;
+      height: 80%;
+      box-shadow: 2px 2px 15px 2px rgb(200 200 200 / 70%);
+      background-color: #FFF;
+      position: relative;
+      top: 10%;
+    }
+
+    .section-contact {
+      width: 90%;
+      height: 90%;
+      position: relative;
+      margin: 0 auto;
+    }
+
+    .show-location {
+      width: 100%;
+      height: 100%;
+      float: right;
+      position: relative;
+      top: 25%;
+    }
+
+    .redimension-show-location {
+      width: 100%;
+      height: 100%;
+      position: relative;
+      left: 0;  
+    }
+
+    .selected-tab {
+      width: 100%;
+      height: 10%;
+      position: relative;
+      top: 4%;
+    }
+
+    .selected-tab-paragraph {
+      font-size: 15px;
+      color: #FFF;
+    }
+
+    .redimension-selected-tab {
+      width: 100%;
+      height: 25%;
+      float: left;
+    }
+
+    .redimension-selected-tab-talk-us-paragraph-sec {
+      width: 100%;
+      height: 60%;
+      float: right;
+    }
+
+    .aTextLocation {
+      width: 100%;
+      height: 100%;
+      border: none;
+      background-color: transparent;
+      font-size: 14px;
+      font-family: 'Montserrat', sans-serif;
+      color: rgb(26,26,26);
+      text-decoration: none;
+      text-align: center;
+      margin-left: auto;
+    }
+
+    .redimension-show-location {
+      width: 100%;
+      height: 100%;
+      position: relative;
+    }
+
+    .show-location-btnAdd {
+      width: 100%;
+      height: 50%;
+    }
+
+    .redimension-show-location-btnAdd, .redimension-show-location-btnStop,.redimension-show-location-btnTelephone {
+      width: 50px;
+      height: 90%;
+      position: relative;
+      margin: 0 auto;
+      top: 5%;
+      box-shadow: 2px 2px 10px 2px rgba(200,200,200,.7);
+      background-color: #FFF;
+    }
+
+    .show-location-btnStop {
+      width: 100%;
+      height: 50%;
+      left: 0;
+    }
+
+    .selected-tab-talk-us-paragraph {
+      font-size: 20px;
+      text-align: center;
+      float: none;
+    }
+      
+    .selected-tab-talk-us-paragraph-sec {
+      text-align: center;
+    }
+
+    #all-content {
+      width: 100%;
+      height: 100%;
+      float: right;
+    } 
+
+    .content-iframe {
+      width: 0;
+      height: 0;
+      opacity: 0;
+    }
+
+    #content-iframe-on {
+      opacity: 0;
+    }
+
+    .fullscreen-location, #fullscreen-location-img {
+      width: 0;
+      height: 0;
+      z-index: -1;
+    }
+    /* ========== FIM FALE CONOSCO ========== */
+    /* ========== PASTORES =========== */
+
+    .selected-tab-paragraph-shepherds-first {
+      text-align: center;
+    }
+
+    .selected-tab-paragraph-shepherds-second {
+      text-align: center;
+    }
+
+    #btnStop {
+      position: absolute;
+    }
+  }
